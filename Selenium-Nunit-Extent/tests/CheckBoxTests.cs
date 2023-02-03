@@ -45,4 +45,3 @@ namespace selenium_nunit_extent.tests
         }
     }
 }
-
