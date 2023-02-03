@@ -11,24 +11,9 @@ using WebDriverManager.DriverConfigs.Impl;
 
 namespace selenium_nunit_extent.utils
 {
-	public class BaseTest
-	{
+	public class BaseTest: Reporter
+    {
 
-
-        ExtentReports extentReports;
-        public ExtentTest extentTest;
-
-        [OneTimeSetUp]
-        public void SetupReporting()
-        {
-            string workingDirectory = Environment.CurrentDirectory;
-            string projectDirectory = Directory.GetParent(workingDirectory).Parent.Parent.FullName;
-            String reportPath = projectDirectory + "//index.html";
-            var htmlReporter = new ExtentHtmlReporter(reportPath);
-            extentReports = new ExtentReports();
-            extentReports.AttachReporter(htmlReporter);
-            extentReports.AddSystemInfo("Author", "Parthiban Rajasekaran");
-        }
 
         [SetUp]
         public void SetupBrowser()
@@ -65,14 +50,6 @@ namespace selenium_nunit_extent.utils
             DriverManagement.GetDriver.Quit();
             extentTest.Log(Status.Info, "Browser is closed");
             
-        }
-
-
-        public MediaEntityModelProvider CaptureScreenshot(IWebDriver driver, string screenshotName)
-        {
-            var screenshot = ((ITakesScreenshot)driver).GetScreenshot().AsBase64EncodedString;
-            var mediaEntity = MediaEntityBuilder.CreateScreenCaptureFromBase64String(screenshot, screenshotName).Build();
-            return mediaEntity;
         }
 
 
