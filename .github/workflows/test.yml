@@ -31,9 +31,10 @@ jobs:
       - name: Run the Selenium-NUnit-Extent tests
         run: dotnet test --no-build
       
-      - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@releases/v3
-        with:
-          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-          BRANCH: main
-          FOLDER: D:\a\Selenium-NUnit-Extent\Selenium-NUnit-Extent\Selenium-Nunit-Extent
+      - name: Deploy report to Github Pages
+        if: always()
+        uses: peaceiris/actions-gh-pages@v2
+        env:
+          PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PUBLISH_BRANCH: gh-pages
+          PUBLISH_DIR: .
