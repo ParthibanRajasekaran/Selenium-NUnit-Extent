@@ -35,5 +35,5 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@releases/v3
         with:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-          BRANCH: gh-pages
+          BRANCH: main
           FOLDER: D:\a\Selenium-NUnit-Extent\Selenium-NUnit-Extent\Selenium-Nunit-Extent
