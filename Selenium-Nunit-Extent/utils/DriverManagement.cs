@@ -1,7 +1,9 @@
 ﻿using System;
+using AventStack.ExtentReports;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Firefox;
+using selenium_nunit_extent.utils;
 using WebDriverManager.DriverConfigs.Impl;
 
 namespace Selenium_Nunit_Extent.utils
