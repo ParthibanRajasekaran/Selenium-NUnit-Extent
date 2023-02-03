@@ -2,8 +2,11 @@ name: Selenium C# Chrome Test
 
 on:
   push:
-    branches:
-      - main
+    branches: [ main ]
+  workflow_dispatch:
+  schedule:
+  # runs tests every day at 4am
+  - cron: '0 11 * * 2,6'
 
 jobs:
   test:
