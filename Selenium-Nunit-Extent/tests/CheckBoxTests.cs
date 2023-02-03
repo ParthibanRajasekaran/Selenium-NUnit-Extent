@@ -9,7 +9,7 @@ using Selenium_Nunit_Extent.utils;
 namespace selenium_nunit_extent.tests
 {
     [TestFixture]
-    [Parallelizable(ParallelScope.Children)]
+    //[Parallelizable(ParallelScope.Children)]
     public class CheckBoxTests : BaseTest
     {
         private HomePage homePage = new HomePage();
