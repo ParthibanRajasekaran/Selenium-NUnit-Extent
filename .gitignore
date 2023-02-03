@@ -1,0 +1,38 @@
+## Build artifacts
+bin/
+obj/
+
+## Nuget packages
+packages/
+
+## Test results
+TestResults/
+
+## Logs
+*.log
+
+## Visual Studio
+[Bb]in
+[Oo]bj
+*.cache
+*.user
+*.suo
+*.sln.docstates
+*.opensdf
+*.vsmdi
+*.testsettings
+.vs
+
+## Operating system files
+*.DS_Store
+Thumbs.db
+
+## Visual Studio C# Analyzer files
+*.ruleset
+*.runsettings
+
+# Local History for Visual Studio
+.localhistory/
+
+# HTML report generated
+Selenium-Nunit-Extent/index.html
