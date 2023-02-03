@@ -7,6 +7,10 @@ on:
   schedule:
   # runs tests every day at 4am
   - cron: '0 11 * * 2,6'
+  
+defaults:
+    run:
+      working-directory: Selenium-Nunit-Extent
 
 jobs:
   test:
