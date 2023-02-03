@@ -31,14 +31,9 @@ jobs:
       - name: Run the Selenium-NUnit-Extent tests
         run: dotnet test --no-build
       
-      - name: get contents
-        run: ls
-        
-      - name: get path
-        run: pwd
-      
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@releases/v3
         with:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           BRANCH: gh-pages
+          FOLDER: D:\a\Selenium-NUnit-Extent\Selenium-NUnit-Extent\Selenium-Nunit-Extent
