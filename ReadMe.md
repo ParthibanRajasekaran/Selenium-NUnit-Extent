@@ -3,8 +3,8 @@
 This template uses C# to implement Selenium with NUnit framework, Fluent Page Object Model(FPOM) design pattern and Extent reporting.
 
 ## Pre-requisite
-.NET 7.0
-IDE 
+* .NET 7.0
+* IDE 
 
 ## Get Started
 - Clone the project
