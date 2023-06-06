@@ -1,35 +1,3 @@
-# name: Selenium C# Chrome Test
-
-# on:
-#   push:
-#     branches: [ main ]
-#   workflow_dispatch:
-#   schedule:
-#     - cron: '0 11 * * 2,6'
-
-# defaults:
-#   run:
-#     working-directory: Selenium-Nunit-Extent
-
-# jobs:
-#   test:
-#     runs-on: windows-latest
-
-#     steps:
-#       - name: Checkout code
-#         uses: actions/checkout@v2
-
-#       - name: Set up .NET Core
-#         uses: actions/setup-dotnet@v1
-#         with:
-#           dotnet-version: 7.0.x
-
-#       - name: Build the Selenium-Nunit-Extent project
-#         run: dotnet build
-
-#       - name: Run the Selenium-Nunit-Extent tests
-#         run: dotnet test --no-build
-
 name: Selenium C# Chrome Test
 
 on:
@@ -45,14 +13,11 @@ defaults:
 
 jobs:
   test:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-
-      - uses: browser-actions/setup-chrome@latest
-      - run: google-chrome-stable --version
 
       - name: Set up .NET Core
         uses: actions/setup-dotnet@v1
