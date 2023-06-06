@@ -1,4 +1,5 @@
 using System;
+using System.Threading;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Firefox;
@@ -20,7 +21,7 @@ namespace Selenium_Nunit_Extent.utils
                     driver.Value = new FirefoxDriver();
                     break;
                 case "chrome":
-                    WebDriverManager.ChromeDriverManager.Instance.Setup();
+                    new WebDriverManager.DriverManager().SetUpDriver(new ChromeConfig());
                     driver.Value = new ChromeDriver();
                     break;
                 default:
