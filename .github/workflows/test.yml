@@ -54,7 +54,7 @@ jobs:
       - name: Setup Chrome
         uses: browser-actions/setup-chrome@latest
         with:
-          chrome-version: '113'
+          chrome-version: '114'
 
       - name: Set up .NET Core
         uses: actions/setup-dotnet@v1
