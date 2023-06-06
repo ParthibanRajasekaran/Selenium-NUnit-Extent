@@ -1,9 +1,8 @@
-﻿using System;
-using AventStack.ExtentReports;
+using System;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Firefox;
-using selenium_nunit_extent.utils;
+using WebDriverManager;
 using WebDriverManager.DriverConfigs.Impl;
 
 namespace Selenium_Nunit_Extent.utils
@@ -18,16 +17,19 @@ namespace Selenium_Nunit_Extent.utils
             {
                 case "firefox":
                     new WebDriverManager.DriverManager().SetUpDriver(new FirefoxConfig());
-                    return driver.Value = new FirefoxDriver();
+                    driver.Value = new FirefoxDriver();
+                    break;
                 case "chrome":
-                    new WebDriverManager.DriverManager().SetUpDriver(new ChromeConfig());
-                    return driver.Value = new ChromeDriver();
+                    WebDriverManager.ChromeDriverManager.Instance.Setup();
+                    driver.Value = new ChromeDriver();
+                    break;
                 default:
                     throw new Exception("Invalid browser name: " + browserName);
             }
+
+            return driver.Value;
         }
 
         public static IWebDriver GetDriver => driver.Value;
     }
 }
-
