@@ -21,7 +21,7 @@ namespace selenium_nunit_extent.utils
             // Create an entry for the extent listener
             extentTest = extentReports.CreateTest(TestContext.CurrentContext.Test.Name);
 
-            string browser = TestContext.Parameters["browserName"] ?? ConfigurationManager.AppSettings["browserName"] ?? "firefox";
+            string browser = TestContext.Parameters["browserName"] ?? ConfigurationManager.AppSettings["browserName"] ?? "chrome";
             TestContext.Progress.WriteLine("Test are running on browser: "+ browser);
             DriverManagement.SetDriver(browser);
             extentTest.Log(Status.Info,"Browser is configured");
