@@ -21,7 +21,7 @@ namespace Selenium_Nunit_Extent.utils
                     driver.Value = new FirefoxDriver();
                     break;
                 case "chrome":
-                    new WebDriverManager.DriverManager().SetUpDriver(new ChromeConfig(), "113.0");
+                    new WebDriverManager.DriverManager().SetUpDriver(new ChromeConfig());
                     driver.Value = new ChromeDriver();
                     break;
                 default:
